@@ -1,0 +1,40 @@
+---
+layout: default
+title: Home
+---
+
+<section class="games-section">
+  <h2 class="section-title">Featured Games</h2>
+  <div class="games-slider">
+    {% for game in site.games %}
+      {% if game.featured %}
+        <div class="game-card">
+          {% if game.status %}
+            <div class="badge {{ game.status | downcase }}">{{ game.status }}</div>
+          {% endif %}
+          <img src="{{ game.thumbnail }}" alt="{{ game.title }}">
+          <h3>{{ game.title }}</h3>
+          <div class="rating">{{ game.rating }} <span class="star">★</span></div>
+        </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+</section>
+
+<section class="games-section">
+  <h2 class="section-title">New Games</h2>
+  <div class="games-grid">
+    {% for game in site.games %}
+      {% unless game.featured %}
+        <div class="game-card">
+          {% if game.status %}
+            <div class="badge {{ game.status | downcase }}">{{ game.status }}</div>
+          {% endif %}
+          <img src="{{ game.thumbnail }}" alt="{{ game.title }}">
+          <h3>{{ game.title }}</h3>
+          <div class="rating">{{ game.rating }} <span class="star">★</span></div>
+        </div>
+      {% endunless %}
+    {% endfor %}
+  </div>
+</section>

@@ -1,0 +1,61 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #0b0c1a;
+  color: #fff;
+  margin: 0;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+.games-section {
+  padding: 2rem;
+}
+.section-title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.games-slider, .games-grid {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+}
+.game-card {
+  background: #15162b;
+  padding: 1rem;
+  border-radius: 12px;
+  min-width: 200px;
+  flex-shrink: 0;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 0 10px #0ff6;
+}
+.game-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+.badge {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  background: #0f0;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.7rem;
+  border-radius: 6px;
+}
+.badge.updated {
+  background: orange;
+}
+.rating {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0.5rem;
+}
+.rating .star {
+  color: gold;
+  margin-left: 0.25rem;
+}
