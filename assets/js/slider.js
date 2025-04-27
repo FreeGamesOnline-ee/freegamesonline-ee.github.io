@@ -7,6 +7,9 @@ function nextSlide() {
 function toggleSearch() {
   const searchBar = document.getElementById('searchBar');
   searchBar.classList.toggle('active');
+  if (searchBar.classList.contains('active')) {
+    document.querySelector('.search-bar input').focus();
+  }
 }
 
 // Close search bar when pressing Escape
@@ -26,3 +29,20 @@ function toggleDarkMode() {
     modeIcon.name = "moon-outline";
   }
 }
+
+// Real-time search
+document.addEventListener('DOMContentLoaded', function() {
+  const input = document.querySelector('.search-bar input');
+  input.addEventListener('input', function() {
+    const filter = input.value.toLowerCase();
+    const cards = document.querySelectorAll('.games-grid .game-card, .games-slider .game-card');
+    cards.forEach(card => {
+      const title = card.querySelector('h3').innerText.toLowerCase();
+      if (title.includes(filter)) {
+        card.style.display = '';
+      } else {
+        card.style.display = 'none';
+      }
+    });
+  });
+});
