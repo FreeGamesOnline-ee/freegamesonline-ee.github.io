@@ -3,3 +3,7 @@ description: Play the best free online games - FreeGamesOnline.ee
 theme: minima
 plugins:
   - jekyll-feed
+
+collections:
+  games:
+    output: true
