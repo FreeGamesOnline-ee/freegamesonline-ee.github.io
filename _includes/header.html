@@ -1,8 +1,17 @@
 <header>
   <div class="logo">
-    <img src="/images/logo.png" alt="Logo" height="40">
+    <img src="/images/logo.png" alt="FreeGamesOnline.ee Logo" height="40">
   </div>
-  <div class="search-icon">
-    <img src="/images/search-icon.svg" alt="Search" height="30">
+  <div style="display: flex; gap: 1rem; align-items: center;">
+    <div class="search-icon" onclick="toggleSearch()">
+      <ion-icon name="search-outline" size="large"></ion-icon>
+    </div>
+    <div class="mode-toggle" onclick="toggleDarkMode()">
+      <ion-icon id="modeIcon" name="moon-outline" size="large"></ion-icon>
+    </div>
   </div>
 </header>
+
+<div class="search-bar" id="searchBar">
+  <input type="text" placeholder="Search games...">
+</div>

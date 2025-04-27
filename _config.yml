@@ -1,8 +1,5 @@
-title: MyGames.io
-description: Play Free Web Games Instantly
-baseurl: ""
-url: "https://yourusername.github.io"
-
-collections:
-  games:
-    output: true
+title: FreeGamesOnline.ee
+description: Play the best free online games - FreeGamesOnline.ee
+theme: minima
+plugins:
+  - jekyll-feed

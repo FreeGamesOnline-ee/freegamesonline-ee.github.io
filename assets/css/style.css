@@ -9,6 +9,11 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
+  flex-wrap: wrap;
+}
+.search-icon {
+  cursor: pointer;
+  color: white;
 }
 .games-section {
   padding: 2rem;
@@ -21,12 +26,16 @@ header {
   display: flex;
   gap: 1rem;
   overflow-x: auto;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 .game-card {
   background: #15162b;
   padding: 1rem;
   border-radius: 12px;
   min-width: 200px;
+  max-width: 220px;
+  flex: 1 1 200px;
   flex-shrink: 0;
   text-align: center;
   position: relative;
@@ -58,4 +67,61 @@ header {
 .rating .star {
   color: gold;
   margin-left: 0.25rem;
+}
+@media (max-width: 600px) {
+  .games-grid, .games-slider {
+    flex-direction: column;
+    align-items: center;
+  }
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+.search-bar {
+  position: fixed;
+  top: 80px;
+  right: 20px;
+  background: #15162b;
+  padding: 0.5rem;
+  border-radius: 8px;
+  display: none;
+  box-shadow: 0 0 10px #0ff6;
+  z-index: 999;
+}
+.search-bar.active {
+  display: block;
+  animation: slideIn 0.3s ease forwards;
+}
+.search-bar input {
+  width: 200px;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 4px;
+  background: #22223b;
+  color: #fff;
+}
+@keyframes slideIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+/* Dark/Light mode */
+body.light-mode {
+  background: #f0f0f0;
+  color: #111;
+}
+body.light-mode .game-card {
+  background: #fff;
+  color: #111;
+}
+body.light-mode .search-bar {
+  background: #fff;
+  box-shadow: 0 0 10px #aaa;
+}
+.mode-toggle {
+  cursor: pointer;
+  color: white;
+}
+body.light-mode .mode-toggle {
+  color: black;
 }
