@@ -12,7 +12,7 @@ title: Home
           <img src="{{ game.image }}" alt="{{ game.title }}">
           <h3>{{ game.title }}</h3>
           <div class="rating">
-            ⭐⭐⭐⭐☆
+            {{ game.rating }}
           </div>
         </div>
       {% endif %}
@@ -27,6 +27,9 @@ title: Home
       <div class="game-card" data-url="{{ game.url }}">
         <img src="{{ game.image }}" alt="{{ game.title }}">
         <h3>{{ game.title }}</h3>
+        <div class="rating">
+            {{ game.rating }}
+        </div>
       </div>
     {% endfor %}
   </div>
