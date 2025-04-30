@@ -126,7 +126,7 @@ body.light-mode .mode-toggle {
   color: black;
 }
 
-iframe {
+.game {
   border: 2px solid grey;
   border-radius: 25px;
   justify-content: center;
