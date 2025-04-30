@@ -125,3 +125,9 @@ body.light-mode .search-bar {
 body.light-mode .mode-toggle {
   color: black;
 }
+
+iframe {
+  border: 2px solid grey;
+  border-radius: 25px;
+  justify-content: center;
+}
