@@ -8,7 +8,7 @@ title: Home
   <div class="games-slider">
     {% for game in site.games %}
       {% if game.tags contains "trending" %}
-        <div class="game-card">
+        <div class="game-card" data-url="{{ game.url }}">
           <img src="{{ game.image }}" alt="{{ game.title }}">
           <h3>{{ game.title }}</h3>
           <div class="rating">
@@ -24,7 +24,7 @@ title: Home
   <h2 class="section-title">All Games</h2>
   <div class="games-grid">
     {% for game in site.games %}
-      <div class="game-card">
+      <div class="game-card" data-url="{{ game.url }}">
         <img src="{{ game.image }}" alt="{{ game.title }}">
         <h3>{{ game.title }}</h3>
       </div>
