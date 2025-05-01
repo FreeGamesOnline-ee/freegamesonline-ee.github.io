@@ -145,3 +145,6 @@ body.light-mode .mode-toggle {
   border: none;
 }
 
+.game-desc {
+  color: yellow;
+}
