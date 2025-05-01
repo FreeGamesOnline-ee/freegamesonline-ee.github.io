@@ -1,6 +1,6 @@
 ---
 title: Geometry 9-13 Scratch
-image: /images/geonetry-levels7to8.jpg
+image: /images/geometry-levels7to8.jpg
 tags: updated
 game_url: https://freegamesonline-ee.github.io/gd-4to21/Geometry_Levels_9-13.html
 rating: <ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon>

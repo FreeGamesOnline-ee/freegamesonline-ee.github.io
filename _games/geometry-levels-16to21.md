@@ -1,6 +1,6 @@
 ---
 title: Geometry 16-21 Scratch
-image: /images/geonetry-levels7to8.jpg
+image: /images/geometry-levels7to8.jpg
 tags: trending
 game_url: https://freegamesonline-ee.github.io/gd-4to21/Geometry_Levels_16-21_v3.7.html
 rating: <ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon>
