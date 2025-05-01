@@ -1,6 +1,6 @@
 ---
 title: Geometry 7-8 Scratch
-image: /images/geometry-levels7to8.jpg
+image: /images/geometry-levels7to8.png
 tags: trending
 game_url: https://freegamesonline-ee.github.io/gd-4to21/Geometry_Levels_7-8.html
 rating: <ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon>

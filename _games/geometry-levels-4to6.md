@@ -1,6 +1,6 @@
 ---
 title: Geometry 4-6 Scratch
-image: /images/geometry-levels4to6.jpg
+image: /images/geometry-levels4to6.png
 tags: updated
 game_url: https://freegamesonline-ee.github.io/gd-4to21/Geometry_Levels_4-6.html
 rating: <ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon name="star-outline"></ion-icon><ion-icon name="star-outline"></ion-icon>
