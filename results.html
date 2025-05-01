@@ -1,0 +1,23 @@
+---
+layout: default
+title: Results
+---
+
+<div class="games-section">
+  <h2 class="section-title results-found">Results found for </h2>
+  <div class="games-slider results">
+    {% for game in site.games %}
+      {% if game.tags contains "trending" %}
+        <div class="game-card" data-url="{{ game.url }}">
+          <img src="{{ game.image }}" alt="{{ game.title }}">
+          <h3>{{ game.title }}</h3>
+          <div class="rating">
+            {{ game.rating }}
+          </div>
+        </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+</div>
+
+<script src="/assets/js/results.js"></script>

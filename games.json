@@ -1,0 +1,17 @@
+---
+layout: null
+permalink: /games.json
+---
+
+[
+  {% for game in site.games %}
+    {
+      "title": {{ game.title | jsonify }},
+      "image": {{ game.image | jsonify }},
+      "tags": {{ game.tags | jsonify }},
+      "page_url": {{ game.url | jsonify }},
+      "game_url": {{ game.game_url | jsonify }},
+      "rating": {{ game.rating | jsonify }}
+    }{% unless forloop.last %},{% endunless %}
+  {% endfor %}
+]
