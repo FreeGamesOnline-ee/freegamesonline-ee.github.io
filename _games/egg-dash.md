@@ -2,7 +2,7 @@
 title: Egg Dash
 image: /images/egg-dash.png
 tags: trending
-game_url: https://eutimiochidubem.github.io/gd-scratch/Spooky%20Dash.html
+game_url: https://eutimiochidubem.github.io/gd-scratch/Egg%20Dash.html
 rating: <ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon name="star-half"></ion-icon><ion-icon name="star-outline"></ion-icon>
 layout: game
 ---
