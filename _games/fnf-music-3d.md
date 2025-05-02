@@ -1,6 +1,6 @@
 ---
 title: FNF Music 3D
-image: /images/fnf-music-3d.jpg
+image: /images/fnf-music-3d.jpeg
 tags: trending
 game_url: https://html5.gamedistribution.com/a36efa74f33a4166a8ad641ac8ef7337/?gd_sdk_referrer_url=https://gamedistribution.com/games/fnf-music-3d/
 rating: <ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon name="star-half"></ion-icon><ion-icon name="star-outline"></ion-icon>
