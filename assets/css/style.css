@@ -148,3 +148,11 @@ body.light-mode .mode-toggle {
 .game-desc {
   color: yellow;
 }
+
+.mobile-ad {
+  display: flex;
+}
+
+.mobile-ad.remove {
+  display: none;
+}
