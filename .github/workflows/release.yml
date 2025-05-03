@@ -3,7 +3,7 @@ name: Auto Tag and Release
 on:
   push:
     branches:
-      - main  # or your preferred branch
+      - main
 
 jobs:
   tag-and-release:
@@ -22,14 +22,19 @@ jobs:
         id: tag
         run: echo "tag=v$(date +'%Y%m%d%H%M%S')" >> $GITHUB_OUTPUT
 
-      - name: Create Git tag
+      - name: Create tag and push with PAT
+        env:
+          GH_PAT: ${{ secrets.GH_PAT }}
         run: |
           git tag ${{ steps.tag.outputs.tag }}
+          git remote set-url origin https://x-access-token:${GH_PAT}@github.com/${{ github.repository }}
           git push origin ${{ steps.tag.outputs.tag }}
 
       - name: Create GitHub Release
         uses: ncipollo/release-action@v1
         with:
+          token: ${{ secrets.GH_PAT }}
           tag: ${{ steps.tag.outputs.tag }}
           name: "Release ${{ steps.tag.outputs.tag }}"
           generateReleaseNotes: true
+
