@@ -1,0 +1,35 @@
+name: Auto Tag and Release
+
+on:
+  push:
+    branches:
+      - main  # or your preferred branch
+
+jobs:
+  tag-and-release:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Git
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+
+      - name: Generate tag name
+        id: tag
+        run: echo "tag=v$(date +'%Y%m%d%H%M%S')" >> $GITHUB_OUTPUT
+
+      - name: Create Git tag
+        run: |
+          git tag ${{ steps.tag.outputs.tag }}
+          git push origin ${{ steps.tag.outputs.tag }}
+
+      - name: Create GitHub Release
+        uses: ncipollo/release-action@v1
+        with:
+          tag: ${{ steps.tag.outputs.tag }}
+          name: "Release ${{ steps.tag.outputs.tag }}"
+          generateReleaseNotes: true
