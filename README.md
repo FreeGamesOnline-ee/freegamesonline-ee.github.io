@@ -1,3 +1,12 @@
+<div align="center">
+  <a href="https://github.com/FreeGamesOnline-ee/freegamesonline-ee.github.io/actions/workflows/release.yml">
+    <img src="https://github.com/FreeGamesOnline-ee/freegamesonline-ee.github.io/actions/workflows/release.yml/badge.svg" alt="Auto Tag and Release">
+  </a>
+  <a href="https://github.com/FreeGamesOnline-ee/freegamesonline-ee.github.io/actions/workflows/pages/pages-build-deployment">
+    <img src="https://github.com/FreeGamesOnline-ee/freegamesonline-ee.github.io/actions/workflows/pages/pages-build-deployment/badge.svg" alt="pages-build-deployment">
+  </a>
+</div>
+
 # Welcome to [FreeGamesOnline.ee](https://freegamesonline-ee.github.io) – The Ultimate Free Gaming Platform
 
 **FreeGamesOnline.ee** is the go-to destination for players who love free, high-quality games available instantly in the browser. Whether you're into fast-paced action, brain-teasing puzzles, or relaxing casual games, our platform delivers an unbeatable experience.
