@@ -6,6 +6,10 @@ plugins:
   - jekyll-feed
   - jekyll-sitemap
 
+exclude:
+  - "**/*.sh"
+  - "**/*.py"
+
 collections:
   games:
     output: true
