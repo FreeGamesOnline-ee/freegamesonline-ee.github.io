@@ -4,6 +4,7 @@ theme: minima
 markdown: kramdown
 plugins:
   - jekyll-feed
+  - jekyll-sitemap
 
 collections:
   games:
