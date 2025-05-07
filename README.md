@@ -5,6 +5,10 @@
   <a href="https://github.com/FreeGamesOnline-ee/freegamesonline-ee.github.io/actions/workflows/pages/pages-build-deployment">
     <img src="https://github.com/FreeGamesOnline-ee/freegamesonline-ee.github.io/actions/workflows/pages/pages-build-deployment/badge.svg" alt="pages-build-deployment">
   </a>
+<a href="https://github.com/FreeGamesOnline-ee/freegamesonline-ee.github.io/actions/workflows/build.yml">
+  <img src="https://github.com/FreeGamesOnline-ee/freegamesonline-ee.github.io/actions/workflows/build.yml/badge.svg" alt="Build and Deploy Jekyll Site" />
+</a>
+
 </div>
 
 # Welcome to [FreeGamesOnline.ee](https://freegamesonline-ee.github.io) – The Ultimate Free Gaming Platform
