@@ -10,8 +10,18 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout main branch
+      - name: Checkout repository
         uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Create Gemfile
+        run: |
+          echo "source \"https://rubygems.org\"" > Gemfile
+          echo "gem \"jekyll\", \"~> 4.0\"" >> Gemfile
+          echo "gem \"jekyll-feed\"" >> Gemfile
+          echo "gem \"jekyll-seo-tag\"" >> Gemfile
+          echo "gem \"github-pages\", group: :jekyll_plugins" >> Gemfile
 
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
@@ -26,16 +36,18 @@ jobs:
       - name: Build Jekyll site
         run: bundle exec jekyll build
 
+      - name: Configure Git author
+        run: |
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "github-actions@users.noreply.github.com"
+
       - name: Deploy to build branch
         run: |
-          git config --global user.name "${{ github.actor }}"
-          git config --global user.email "${{ github.actor }}@users.noreply.github.com"
-
           git checkout --orphan temp-build
           git reset --hard
           rm -rf .
           cp -r _site/* .
-          touch .nojekyll  # Optional: disables GitHub Pages Jekyll processing
+          touch .nojekyll
           git add .
           git commit -m "update"
           git branch -M build
