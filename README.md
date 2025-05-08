@@ -8,6 +8,12 @@
 <a href="https://github.com/FreeGamesOnline-ee/freegamesonline-ee.github.io/actions/workflows/build.yml">
   <img src="https://github.com/FreeGamesOnline-ee/freegamesonline-ee.github.io/actions/workflows/build.yml/badge.svg" alt="Build and Deploy Jekyll Site" />
 </a>
+<a href="https://github.com/FreeGamesOnline-ee/freegamesonline-ee.github.io/actions/workflows/github-code-scanning/codeql">
+  <img src="https://github.com/FreeGamesOnline-ee/freegamesonline-ee.github.io/actions/workflows/github-code-scanning/codeql/badge.svg" alt="CodeQL" />
+</a>
+<a href="https://github.com/FreeGamesOnline-ee/freegamesonline-ee.github.io/actions/workflows/devskim.yml">
+  <img src="https://github.com/FreeGamesOnline-ee/freegamesonline-ee.github.io/actions/workflows/devskim.yml/badge.svg" alt="DevSkim" />
+</a>
 
 </div>
 
