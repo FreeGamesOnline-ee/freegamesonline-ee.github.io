@@ -1,6 +1,6 @@
 ---
 title: Crazy Animal City
-image: /images/crazy-animal-city.webl
+image: /images/crazy-animal-city.webp
 tags: trending
 game_url: https://1games.io/game/crazy-animal-city/
 rating: <ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon name="star-half"></ion-icon><ion-icon name="star-outline"></ion-icon>
