@@ -17,6 +17,9 @@
 <a href="https://github.com/FreeGamesOnline-ee/freegamesonline-ee.github.io/actions/workflows/assign.yml">
   <img src="https://github.com/FreeGamesOnline-ee/freegamesonline-ee.github.io/actions/workflows/assign.yml/badge.svg" alt="Auto Assign">
 </a>
+<a href="https://github.com/FreeGamesOnline-ee/freegamesonline-ee.github.io/actions/workflows/renovate-dashboard.yml">
+  <img src="https://github.com/FreeGamesOnline-ee/freegamesonline-ee.github.io/actions/workflows/renovate-dashboard.yml/badge.svg" alt="Renovate PR Tracker">
+</a>
 
 </div>
 
