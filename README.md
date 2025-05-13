@@ -14,6 +14,9 @@
 <a href="https://github.com/FreeGamesOnline-ee/freegamesonline-ee.github.io/actions/workflows/devskim.yml">
   <img src="https://github.com/FreeGamesOnline-ee/freegamesonline-ee.github.io/actions/workflows/devskim.yml/badge.svg" alt="DevSkim" />
 </a>
+<a href="https://github.com/FreeGamesOnline-ee/freegamesonline-ee.github.io/actions/workflows/assign.yml">
+  <img src="https://github.com/FreeGamesOnline-ee/freegamesonline-ee.github.io/actions/workflows/assign.yml/badge.svg" alt="Auto Assign">
+</a>
 
 </div>
 
