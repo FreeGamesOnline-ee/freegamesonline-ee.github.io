@@ -1,0 +1,81 @@
+name: Renovate PR Tracker
+
+on:
+  pull_request:
+    types: [opened, reopened, closed, synchronize]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  update-renovate-checklist:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up GitHub CLI
+        uses: cli/cli-action@v2
+
+      - name: Get Renovate PRs
+        id: get_prs
+        run: |
+          PRS_JSON=$(gh pr list --author renovate[bot] --json number,title,state,url)
+          echo "prs=${PRS_JSON}" >> $GITHUB_OUTPUT
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Build Checklist
+        id: checklist
+        run: |
+          echo "### 🔄 Renovate PR Status" > checklist.md
+          echo "" >> checklist.md
+
+          echo "${{ steps.get_prs.outputs.prs }}" | jq -c '.[]' | while read pr; do
+            TITLE=$(echo "$pr" | jq -r '.title')
+            NUMBER=$(echo "$pr" | jq -r '.number')
+            URL=$(echo "$pr" | jq -r '.url')
+            STATE=$(echo "$pr" | jq -r '.state')
+
+            if [ "$STATE" = "MERGED" ] || [ "$STATE" = "closed" ]; then
+              echo "- [x] [$TITLE (#$NUMBER)]($URL)" >> checklist.md
+            else
+              echo "- [ ] [$TITLE (#$NUMBER)]($URL)" >> checklist.md
+            fi
+          done
+
+          cat checklist.md
+          echo "body<<EOF" >> $GITHUB_OUTPUT
+          cat checklist.md >> $GITHUB_OUTPUT
+          echo "EOF" >> $GITHUB_OUTPUT
+
+      - name: Comment on a tracking issue
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const body = `${{ steps.checklist.outputs.body }}`;
+            const issue_number = 3; // Change this to your tracking issue number
+            const { data: comments } = await github.rest.issues.listComments({
+              ...context.repo,
+              issue_number
+            });
+
+            const botComment = comments.find(comment =>
+              comment.user.type === 'Bot' && comment.body.includes('### 🔄 Renovate PR Status')
+            );
+
+            if (botComment) {
+              await github.rest.issues.updateComment({
+                ...context.repo,
+                comment_id: botComment.id,
+                body
+              });
+            } else {
+              await github.rest.issues.createComment({
+                ...context.repo,
+                issue_number,
+                body
+              });
+            }
