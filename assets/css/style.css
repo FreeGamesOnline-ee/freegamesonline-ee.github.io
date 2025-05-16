@@ -107,23 +107,23 @@ header {
 }
 /* Dark/Light mode */
 body.light-mode {
-  background: #f0f0f0;
-  color: #111;
+  background: #f0f0f0 !important;
+  color: #111 !important;
 }
 body.light-mode .game-card {
-  background: #fff;
-  color: #111;
+  background: #fff !important;
+  color: #111 !important;
 }
 body.light-mode .search-bar {
-  background: #fff;
-  box-shadow: 0 0 10px #aaa;
+  background: #fff !important;
+  box-shadow: 0 0 10px #aaa !important;
 }
 .mode-toggle {
   cursor: pointer;
   color: white;
 }
 body.light-mode .mode-toggle {
-  color: black;
+  color: black !important;
 }
 
 .game {
